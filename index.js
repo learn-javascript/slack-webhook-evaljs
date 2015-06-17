@@ -1,7 +1,7 @@
 'use strict';
 var Sandbox = new (require('sandbox'));
 function evalJSHandler(request, reply){
-    if(request.payload.token !== process.env.config.slackToken) return reply('Incorrect token').code(401);
+    if(request.payload.token !== process.env.slackToken) return reply('Incorrect token').code(401);
     var code = request.payload.text.slice(3).trim();
     Sandbox.run(code, function(out){
         var response = '';
