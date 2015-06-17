@@ -19,6 +19,6 @@ function evalJSHandler(request, reply){
 
 module.exports = {
   handler : evalJSHandler,
-  route : '/slack/outgoing/eval-js',
+  path : '/slack/outgoing/eval-js',
   method : 'POST'
 };
